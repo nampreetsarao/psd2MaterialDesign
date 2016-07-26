@@ -1,0 +1,44 @@
+ <ion-view view-title="PSD2" id="page3" cache-view="false">
+    <!--ion-content padding="true" class="has-header">
+        <p id="aboutPSD22-markdown2" style="color:#000000;" class=" ">{{general.response.info}}</p>
+        <p id="aboutPSD22-markdown2" style="color:#000000;" class=" ">{{ibmInformation.response.info}}</p>
+        <p id="aboutPSD22-markdown2" style="color:#000000;" class=" " ng-repeat="x in bookmarks">
+              <strong>{{x.name}}</strong>
+              <a ng-click="clickLink('{{x.link}}')" class="">link.</a>
+        </p>
+    </ion-content-->
+
+
+
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="hero slide-up" style="background-color: #000000;">
+            <div class="content">
+                <div class="avatar psdIcon" style="background-image: url('img/appIcon.png');"></div>
+                <h3><a class="light">About PSD2</a></h3>
+                <h4><!--we will use this for sub heading--></h4>
+            </div>
+        </div>
+        <div class="tabs tabs-dark tabs-icon-top static">
+            <a ui-sref="menu.profile" class="tab-item">
+                <i class="icon ion-ios-person"></i> Profile
+            </a>
+            <a ui-sref="menu.exploreAPI" class="tab-item">
+                <i class="icon ion-key" ></i> Authorize
+            </a>
+            <a class="tab-item" ng-click="logout()">
+                <i class="icon ion-log-out"></i> Logout
+            </a>
+        </div>
+        <!--h4 class="content padding double-padding-x">Heading</h4-->
+        <div class="list animate-fade-slide-in-right" >
+        	<ul><i class="list marginPargph">
+	                <p id="aboutPSD22-markdown2" style="color:#000000;" class="">{{general.response.info}}</p>
+			        <p id="aboutPSD22-markdown2" style="color:#000000;" class=" ">{{ibmInformation.response.info}}</p>
+			        <p id="aboutPSD22-markdown2" style="color:#000000;" class=" " ng-repeat="x in bookmarks">
+			              <strong>{{x.name}}</strong>
+			              <a ng-click="clickLink('{{x.link}}')" class="">link.</a>
+			        </p>
+            </i></ul>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,56 @@
+<ion-view view-title="Subscription" id="subscription" style="background-color:#;" class=" " >
+    <ion-content padding="true" class="manual-ios-statusbar-padding">
+        <form id="subscribe-form5"  name="subForm" class="list " novalidate="">
+
+                <div class="padding errorMsgDiv">
+                   <p ng-show="subForm.username.$error.required">* Account ID is required</p>
+                   <p ng-show="subForm.accId.$error.required">* Username is required</p>
+                 </div>
+
+            <div class="list">
+                
+                <ion-md-input placeholder="Account ID" name='accId' type="number" ng-model="subscribeObj.subscriptionInfo.accountId" highlight-color="balanced"  autocapitalize="off" class='inputWithLightBG' required></ion-md-input>
+
+                <ion-md-input placeholder="Username" name='username' type="text" ng-model="subscribeObj.subscriptionInfo.username" highlight-color="balanced" autocapitalize="off" class='inputWithLightBG' required></ion-md-input>
+
+                <div class="spacer" style="width: 300px; height: 20px;"></div>
+
+                <label style=""><b>Select a bank:</b></label>
+                <div class="">
+                      <br>
+                      <label>
+                        <input type="radio" name="barclays" value="small" />
+                          <img class='radiobuttons' style="width:50px;" src="img/barclays.jpg">
+                      </label>
+                      <label>
+                        <input type="radio" name="natwest" value="small" />
+                          <img src="img/natwest.jpg" style="width:42px;">
+                      </label>
+                      <label>
+                        <input type="radio" name="hsbc" value="small" />
+                          <img src="img/hsbc.jpg" style="width:56px;">
+                      </label>
+                </div>
+
+            </div>
+
+
+            <div class="padding">
+                <button id="sub-button4" class=" button button-full button-assertive ink" ng-disabled="subForm.$invalid" ng-click="subscribe()" >Subscribe</button>
+            </div>
+
+           <!--  <label class="item item-input " id="subscribe-input9">
+                <span class="input-label">Account ID</span>
+                <input type="number" placeholder="" ng-model="subscribeObj.subscriptionInfo.accountId">
+            </label>
+            <label class="item item-input " id="subscribe-input10">
+                <span class="input-label">Username</span>
+                <input type="text" placeholder="" ng-model="subscribeObj.subscriptionInfo.username" autocapitalize="off">
+            </label> -->
+        </form><!-- 
+        <div class="spacer" style="width: 300px; height: 32px;"></div>
+        <button id="sub-button4" class=" button button-positive  button-block " ng-click="subscribe()">Subscribe</button> -->
+        <!--  {{dataFromService}}
+            {{dataFromService.status}}  -->
+    </ion-content>
+</ion-view>

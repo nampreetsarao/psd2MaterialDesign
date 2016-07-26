@@ -1,0 +1,10 @@
+ <ion-view title="About PSD2" id="page3" class=" ">
+    <ion-content padding="true" class="has-header">
+        <p id="aboutPSD22-markdown2" style="color:#000000;" class=" ">{{general.response.info}}</p>
+        <p id="aboutPSD22-markdown2" style="color:#000000;" class=" ">{{ibmInformation.response.info}}</p>
+        <p id="aboutPSD22-markdown2" style="color:#000000;" class=" " ng-repeat="x in bookmarks">
+              <strong>{{x.name}}</strong>
+              <a ng-click="clickLink('{{x.link}}')" class="">link.</a>
+        </p>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,34 @@
+<ion-view view-title="Authorize App" id="page2" class=" ">
+    <ion-content padding="true" class="has-header">
+      <form id="login-form1" class="list ">
+
+          <div class="spacer" style="height: 40px;"></div>
+
+
+          <label style="text-align:left"><b>Select a bank:</b></label>
+          <div class="centeredContentDiv">
+              <br>
+              <label>
+                <input type="radio" name="barclays" value="small" />
+                  <img class='radiobuttons' style="width:50px;" src="img/barclays.jpg">
+              </label>
+              <label>
+                <input type="radio" name="natwest" value="small" />
+                  <img src="img/natwest.jpg" style="width:42px;">
+              </label>
+              <label>
+                <input type="radio" name="hsbc" value="small" />
+                  <img src="img/hsbc.jpg" style="width:56px;">
+              </label>
+          </div>
+          <div class="centeredContentDiv">
+            <a id="login-button1" ng-click="apiClick()" style="color:#434D43;" class=" button button-balanced  button-block " >Authorize app to access Bank API</a>
+          </div>
+          <p id="aboutPSD22-markdown2" style="color:#000000;" class=" " ng-if="enableSubMenu">App has now been authorized. More items are now available in the side menu. Happy Exploring!!</p>
+      </form>
+   <!--  {{requestToken}}
+      {{oauthData}} 
+      {{dataFromService}}
+            {{dataFromService.status}} -->
+    </ion-content>
+</ion-view>
